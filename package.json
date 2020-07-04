@@ -1,0 +1,11 @@
+{
+  "name": "raasta-build",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/vadapallikrishna/include",
+  "author": "Krishna Satya <vadapallikrishna@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "minimist": "^1.2.5"
+  }
+}

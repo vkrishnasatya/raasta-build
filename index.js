@@ -1,30 +1,27 @@
 
-var app = window.document
-
-class Component extends HTMLTemplateElement {
-    constructor() {
 
 
-    }
-}
-
-class AppElement extends HTMLElement {
+class App extends HTMLElement {
     constructor(data) {
         const shadowRoot = this.attachShadow({mode: 'open'});
-	shadowRoot.appendChild(fetch(data));
+
     }
 }
+
+customElements.define('app', App)
 
  
 
 function format(o) {
-    return      
+    return 
 }
 
 function assign(o) {
-    return  
+    return process(o);
 }
 
-function fetch(data) {
+function fetch(endpoint) {
     assign(format(data))
-}  
+}
+
+
