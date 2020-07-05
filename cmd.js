@@ -25,7 +25,7 @@ if(cmd == "build") {
         fs.rmdirSync('public/')
     }
     const cwd = process.cwd()
-    fs.copyFileSync(cwd + "node_modules/raasta-build/server.js", cwd + "public/server.js");
+    fs.copyFileSync(cwd + "/node_modules/raasta-build/server.js", cwd + "/public/server.js");
 } else if(cmd == "help") {
     console.log("Raasta Build");
     console.log("build - to build project ");
