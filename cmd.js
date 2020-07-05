@@ -24,7 +24,7 @@ if(cmd == "build") {
     } catch (Exception) {
 
     }
-    fs.copyFileSync("node_modules/raasta-build/server.js", cwd + "/public/server.js");
+    fs.copyFileSync("node_modules/raasta-build/server.js",  "public/server.js");
 } else if(cmd == "help") {
     console.log("Raasta Build");
     console.log("build - to build project ");
