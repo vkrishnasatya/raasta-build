@@ -14,6 +14,7 @@ if(cmd == "build") {
     console.log("building");
     if(!fs.existsSync("raasta.json")) {
 	console.log("JSON file doesnt exists");
+	process.exit()
     }
     let jsonFile = fs.readFileSync('raasta.json','utf8');
     let json = JSON.parse(jsonFile)
