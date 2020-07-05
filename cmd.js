@@ -19,8 +19,11 @@ if(cmd == "build") {
     let jsonFile = fs.readFileSync('raasta.json','utf8');
     let json = JSON.parse(jsonFile)
     console.log(json);
-    fs.mkdirSync('public/');
-	
+    try {	
+    	fs.mkdirSync('public/');
+    } catch (Exception) {}
+
+    fs.copyFileSync(,"public/server.js");
 } else if(cmd == "help") {
     console.log("Raasta Build");
     console.log("build - to build project ");

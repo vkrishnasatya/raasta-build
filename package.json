@@ -1,5 +1,5 @@
 {
-  "name": "@vadapallikrishna/raasta-build",
+  "name": "raasta-build",
   "version": "1.0.0",
   "main": "index.js",
   "repository": {
@@ -9,7 +9,9 @@
   "author": "Krishna Satya <vadapallikrishna@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "minimist": "^1.2.5"
+    "expressjs": "^1.0.1",
+    "minimist": "^1.2.5",
+    "serverless-http": "^2.5.0"
   },
   "bin": {
     "raasta": "cmd.js"
