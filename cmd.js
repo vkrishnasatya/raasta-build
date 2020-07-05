@@ -21,9 +21,11 @@ if(cmd == "build") {
     console.log(json);
     try {	
     	fs.mkdirSync('public/');
-    } catch (Exception) {}
+    } catch (Exception) {
+        fs.rmdirSync('public/')
+    }
 
-    fs.copyFileSync(,"public/server.js");
+    fs.copyFileSync("node_modules/raasta-build/server.js","public/server.js");
 } else if(cmd == "help") {
     console.log("Raasta Build");
     console.log("build - to build project ");
