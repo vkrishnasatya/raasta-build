@@ -1,11 +1,26 @@
 {
-  "name": "raasta-build",
+  "name": "@vadapallikrishna/raasta-build",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/vadapallikrishna/include",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vadapallikrishna/include.git"
+  },
   "author": "Krishna Satya <vadapallikrishna@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "minimist": "^1.2.5"
-  }
+  },
+  "bin": {
+    "raasta": "cmd.js"
+  },
+  "bugs": {
+    "url": "https://github.com/vadapallikrishna/include/issues"
+  },
+  "homepage": "https://github.com/vadapallikrishna/include#readme",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "description": ""
 }
