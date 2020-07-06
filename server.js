@@ -9,7 +9,7 @@ app.use(express.static('static'));
 
 for(page in config.pages) {
     app.get(config.pages[page].path, function(req,res){
-        req.end("Hello, World");
+        res.send("Hello, World");
     });
 }
 
