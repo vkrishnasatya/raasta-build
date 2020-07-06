@@ -1,3 +1,4 @@
+const fs = require('fs');
 
 function getConfig() {
     let jsonFile = fs.readFileSync('raasta.json','utf8');
