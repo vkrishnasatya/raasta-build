@@ -1,13 +1,15 @@
 #! /usr/bin/env node
 const express = require('express');
-const raasta = require('raasta-build');
 const hbs = require('hbs');
+const getConfig = require('./index').getConfig;
+
 const app = express();
 
-const config = raasta.getConfig();
+const config = getConfig();
 
 app.set('view engine', 'hbs');
-app.use(express.static('static'));
+app.set('views', 'templates/')
+app.use('/static', express.static('static'));
 
 for(page in config.pages) {
     app.get(config.pages[page].path, function(req,res){
