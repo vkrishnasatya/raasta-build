@@ -5,4 +5,4 @@ function getConfig() {
     return json;
  }
 
-moduel.exports.getConfig = getConfig;
+module.exports.getConfig = getConfig;
