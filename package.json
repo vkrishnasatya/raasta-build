@@ -14,7 +14,7 @@
     "serverless-http": "^2.5.0"
   },
   "bin": {
-    "raasta": "cmd.js",
+    "raasta-build": "build.js",
     "raasta-serve": "server.js"
   },
   "bugs": {
