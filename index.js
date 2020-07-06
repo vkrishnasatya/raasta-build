@@ -1,3 +1,3 @@
-import { getConfig } from "cmd.js";
+import { getConfig } from "cmd";
 
 export getConfig;
