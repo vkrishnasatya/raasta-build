@@ -8,7 +8,7 @@ const app = express();
 const config = getConfig();
 
 app.set('view engine', 'hbs');
-app.set('views', 'templates/')
+app.set('views', 'pages/')
 app.use('/static', express.static('static'));
 
 for(page in config.pages) {
