@@ -24,4 +24,3 @@ if(cmd == "build") {
     console.log("build - to build project ");
 }
 
-module.exports.getConfig = getConfig;
