@@ -8,7 +8,7 @@ const config = raasta.getConfig();
 app.use(express.static('static'));
 
 for(page in config.pages) {
-    app.get(page.path, function(req,res){
+    app.get(pages[page].path, function(req,res){
         req.send("Hello, World");
     });
 }
