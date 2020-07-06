@@ -3,6 +3,7 @@
 const minimist = require('minimist')
 const fs = require('fs');
 
+
 const argv = minimist(process.argv.slice(2))
 const cmd = argv._[0]
 
@@ -10,11 +11,6 @@ function createFile(name) {
   fs.writeFile("public/" + name,"Hello, World");
 }
 
-function getConfig() {
-    let jsonFile = fs.readFileSync('raasta.json','utf8');
-    let json = JSON.parse(jsonFile);
-    return json;	
-}
 
 if(cmd == "build") {
     console.log("building");
@@ -28,4 +24,4 @@ if(cmd == "build") {
     console.log("build - to build project ");
 }
 
- export getConfig;
+module.exports.getConfig = getConfig;
