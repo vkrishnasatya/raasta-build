@@ -1,4 +1,4 @@
-
+#! /usr/bin/env node
 const express = require('express');
 const raasta = require('raasta-build');
 const app = express();
