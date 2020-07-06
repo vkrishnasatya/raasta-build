@@ -15,6 +15,7 @@
   },
   "bin": {
     "raasta": "cmd.js"
+    "raasta-serve": "node server.js"
   },
   "bugs": {
     "url": "https://github.com/vadapallikrishna/include/issues"

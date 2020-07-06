@@ -1,14 +1,19 @@
 
 const express = require('express');
-const serverless = require('serverless-http');
-
+const raasta = require('raasta-build');
 const app = express();
 
-app.get('/', function(req,res){
-    res.end("Hello, World");
-})
+const config = raasta.getConfig();
 
-module.exports.handler = serverless(app);
+app.use(express.static('static'));
+
+for(page in config.pages) {
+    app.get(page.path, function(req,res){
+        req.send("Hello, World");
+    });
+}
+
+app.listen(process.env.PORT || 3000, () => "server is running")
 
 
 
