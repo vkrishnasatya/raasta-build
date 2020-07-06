@@ -10,24 +10,22 @@ function createFile(name) {
   fs.writeFile("public/" + name,"Hello, World");
 }
 
+function getConfig() {
+    let jsonFile = fs.readFileSync('raasta.json','utf8');
+    let json = JSON.parse(jsonFile);
+    return json;	
+}
+
 if(cmd == "build") {
     console.log("building");
     if(!fs.existsSync("raasta.json")) {
 	console.log("JSON file doesnt exists");
 	process.exit()
     }
-    let jsonFile = fs.readFileSync('raasta.json','utf8');
-    let json = JSON.parse(jsonFile)
-    console.log(json);
-    try {	
-    	fs.mkdirSync('public/');
-    } catch (Exception) {
-
-    }
-    fs.copyFileSync("node_modules/raasta-build/server.js",  "public/server.js");
+    //fs.copyFileSync("node_modules/raasta-build/server.js",  "public/server.js");
 } else if(cmd == "help") {
     console.log("Raasta Build");
     console.log("build - to build project ");
 }
 
- 
+ export getConfig;
